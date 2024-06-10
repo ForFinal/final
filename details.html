@@ -10,6 +10,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Document</title>
     <style>
+        body {
+            background-color: #e9edc9;
+        }
+
+        .detailmain {
+            background-color: white;
+            width: 90%;
+            margin: auto;
+        }
+
         .product-details {
             display: flex;
             width: 80%;
@@ -17,39 +27,189 @@
         }
 
         .product-details>.left {
-            float: left;
             width: 35%;
             height: 35%;
+            padding-top: 2%;
         }
 
         .product-details>.right {
-            float: right;
-            width: 50%;
-            height: 35%;
-            margin: 1rem;
+            width: 65%;
+            margin-left: 3rem;
+            padding-top: 5%;
         }
 
         .amount {
             display: flex;
             align-items: center;
             justify-content: space-around;
+            flex-direction: column;
+            width: 100%;
         }
+
 
         .btn_cart {
             border: 1px solid;
-            width: fit-content;
             display: flex;
             height: 30px;
+            width: calc(195px - 30px);
+            align-items: center;
+            justify-content: space-between;
         }
 
         #up,
-        #num,
         #down {
             text-align: center;
+            background-color: lightgray;
+            height: 30px;
             width: 30px;
-            background: transparent;
             border: none;
         }
+
+        #up {
+            margin-left: auto;
+        }
+
+        #down {
+            margin-right: auto;
+        }
+
+
+        #num {
+            text-align: center;
+            height: 30px;
+            width: 110px;
+            border: none;
+            outline: none;
+        }
+
+        .btn-container {
+            display: flex;
+            margin-top: 1rem;
+            width: 168px;
+            justify-content: space-between;
+        }
+
+        .btn-container a {
+            text-decoration: none;
+        }
+
+        .btn {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: greenyellow;
+            color: black;
+        }
+
+        .feedback {
+            margin: 3% 8%;
+            padding: 1%;
+            text-align: left;
+        }
+
+        fieldset {
+            margin-bottom: 3%;
+        }
+
+        .getFeedback {
+            display: flex;
+            justify-content: center;
+            padding: 1%;
+            margin: 1%;
+            background-color: whitesmoke;
+        }
+
+        .gFuser {
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+            height: 50px;
+            padding-right: 1rem;
+        }
+
+        .gFleft {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .gFright {
+            flex: 1;
+            text-align: left;
+            padding-left: 2%;
+        }
+
+        .writeFeedback {
+            padding: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .wfuser {
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+            height: 50px;
+        }
+
+        .wfForm {
+            flex: 1;
+        }
+
+        .wf-btn {
+            width: 100%;
+            align-self: center;
+            margin-top: 10px;
+        }
+
+        /*
+        .feedback_form {
+            margin-top: 20px;
+        }
+
+        .feedback_form textarea {
+            width: 80%;
+            margin-top: 10px;
+        }*/
+
+        /*
+        @media (max-width: 768px) {
+            .product-details {
+                flex-direction: column;
+            }
+
+            .product-details>.left {
+                width: 100%;
+                height: auto;
+            }
+
+            .product-details>.right {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .btn_cart,
+            .btn-container {
+                width: 100%;
+            }
+            */
     </style>
 </head>
 
@@ -58,32 +218,100 @@
 
     </header>
 
-    <main>
-        <div class="product-details">
-            <img class="left" id="productImage" src="" alt="Product Image">
-            <div class="right">
-                <br>
-                <h2 id="productName"></h2>
-                <br>
-                <p id="productPrice"></p>
-                <br>
-                <p id="productDescription"></p>
-                <br>
-                <div class="amount">
-                    <div class="btn_cart">
-                        <input type="button" id="down" value="-"></input>
-                        <input type="text" id="num" value="0"></input>
-                        <input type="button" id="up" value="+"></input>
-                        <button type="button" class="btn btn-primary" style="margin-top: 2rem;">購買</button>
+    <main class="detailmain">
+        <section>
+            <div class="product-details">
+                <img class="left" id="productImage" src="" alt="Product Image">
+                <div class="right">
+                    <h2 id="productName"></h2>
+                    <br>
+                    <h4 id="productPrice"></h4>
+                    <br>
+                    <p id="productFrom"></p>
+                    <br>
+                    <p id="productId"></p>
+                    <br>
+                    <p id="productDescription"></p>
+                    <br>
+                    <h5 id="productPro"></h5>
+                    <br>
+                    <br>
+                    <div class="amount">
+                        <div class="btn_cart">
+                            <input type="button" id="down" value="-"></input>
+                            <input type="text" id="num" value="0"></input>
+                            <input type="button" id="up" value="+"></input><br>
+                        </div>
+                        <div class="btn-container">
+                            <button type="button" class="btn btn-primary">add to cart</button>
+                            <a href="car.html"><button type="button" class="btn btn-primary">buy now</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="feedback">
+            <h2>商品評論</h2>
+            <fieldset>
+                <div class="getFeedback">
+                    <div class="gFuser"><img src="img/user.png"></div>
+                    <div class="gFleft">
+                        <div class="account">張小名</div>
+                        <div class="stars">
+                            <span class="stars">★</span>
+                            <span class="stars">★</span>
+                            <span class="stars">★</span>
+                            <span class="stars">★</span>
+                            <span class="stars">★</span>
+                        </div>
+                    </div>
+                    <div class="gFright">很甜很好吃 會無限回購小舖</div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="getFeedback">
+                    <div class="gFuser"><img src="img/user.png"></div>
+                    <div class="gFleft">
+                        <div class="account">Chang</div>
+                        <div class="stars">
+                            <span class="stars">★</span>
+                            <span class="stars">★</span>
+                            <span class="stars">★</span>
+                            <span class="stars">★</span>
+                            <span class="stars">★</span>
+                        </div>
+                    </div>
+                    <div class="gFright">The mango is absolutely amazing, with its sweet and juicy flesh that is truly
+                        astonishing.The peach was delectable, with a perfect balance of sweetness and tartness that left
+                        me
+                        wanting more.</div>
+                </div>
+            </fieldset>
+            <br>
+            <hr>
+            <fieldset>
+                <div class="writeFeedback">
+                    <div class="wfuser"><img src="img/user.png"></div>
+                    <div class="wfForm">
+                        <form method="post">
+                            姓名: <input type="text" name="name" size="20" /><br>
+                            評分:
+                            <!--參考https://yangmooo.pixnet.net/blog/post/26416610-%E3%80%90javascript%E3%80%91%E4%BA%94%E6%98%9F%E8%A9%95%E9%BB%9E-->
+                            <span id="idimg1" class="star" data-index="0">☆</span>
+                            <span id="idimg2" class="star" data-index="1">☆</span>
+                            <span id="idimg3" class="star" data-index="2">☆</span>
+                            <span id="idimg4" class="star" data-index="3">☆</span>
+                            <span id="idimg5" class="star" data-index="4">☆</span><br>
+                            評論: <br>
+                            <textarea name="suggest" cols="80" rows="3"></textarea><br><br>
+                            <input class="wf-btn" type="submit" value="送出" id="clean" />
+                        </form>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+
     </main>
-
-    <footer>
-
-    </footer>
 
     <script>
         const queryString = window.location.search;
@@ -92,11 +320,17 @@
         const productDescription = urlParams.get('description');
         const productPrice = urlParams.get('price');
         const productImage = urlParams.get('img');
+        const productFrom = urlParams.get('from');
+        const productId = urlParams.get('pid');
+        const productPro = urlParams.get('pro');
 
         document.getElementById('productName').innerText = productName;
         document.getElementById('productDescription').innerText = productDescription;
         document.getElementById('productPrice').innerText = '售價：NT$' + productPrice;
-        document.getElementById('productImage').src = './images/' + productImage;
+        document.getElementById('productImage').src = './img/' + productImage;
+        document.getElementById('productFrom').innerText = '產地：' + productFrom;
+        document.getElementById('productId').innerText = '商品編號：' + productId;
+        document.getElementById('productPro').innerText = '保存方式：' + productPro;
 
         window.onload = async function () {
             addListener();
@@ -115,6 +349,56 @@
                     num.value = parseInt(num.value) - 1;
                 }
             });
+        }
+
+        /*星星*/
+        document.addEventListener("DOMContentLoaded", function () {
+            let stars = document.getElementsByClassName("star");
+            for (let i = 0; i < stars.length; i++) {
+                stars[i].addEventListener("mouseover", mouseover);
+                stars[i].addEventListener("mouseout", mouseout);
+                stars[i].addEventListener("click", Click);
+            }
+            document.getElementById("clean").addEventListener("click", clean);
+        });
+
+        function mouseover() {
+            let index = parseInt(this.dataset.index);
+            for (let i = 0; i <= index; i++) {
+                document.getElementById("idimg" + (i + 1)).textContent = "★";
+            }
+        }
+
+        function mouseout() {
+            let index = parseInt(this.dataset.index);
+            for (let i = 0; i <= index; i++) {
+                document.getElementById("idimg" + (i + 1)).textContent = "☆";
+            }
+            document.getElementById("score").textContent = "";
+        }
+
+        function Click() {
+            let index = parseInt(this.dataset.index);
+            for (let i = 0; i <= index; i++) {
+                document.getElementById("idimg" + (i + 1)).textContent = "★";
+            }
+            let stars = document.getElementsByClassName("star");
+            for (let i = 0; i < stars.length; i++) {
+                stars[i].removeEventListener("mouseover", mouseover);
+                stars[i].removeEventListener("mouseout", mouseout);
+                stars[i].removeEventListener("click", Click);
+            }
+        }
+
+        function clean() {
+            let stars = document.getElementsByClassName("star");
+            for (let i = 0; i < stars.length; i++) {
+                stars[i].textContent = "☆";
+                stars[i].addEventListener("mouseover", mouseover);
+                stars[i].addEventListener("mouseout", mouseout);
+                stars[i].addEventListener("click", Click);
+            }
+            document.getElementById("score").textContent = "";
         }
     </script>
 </body>
