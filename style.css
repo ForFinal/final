@@ -52,6 +52,7 @@ img {
 main {
     float: left;
     width: 55%;
+    font-size: 20px;
 }
 
 .payBtn {
@@ -118,13 +119,15 @@ main {
 
 .main {
     margin-left: 450px;
-    margin-top: 1px;
-}
-
-.allbg {
-    background-color: #FFFCEC;
+    margin-top: -30px;
 }
 
 .date {
     width: 150px;
 }
+
+.deco {
+    width: 400px;
+    height: auto;
+}
+
