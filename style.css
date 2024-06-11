@@ -207,3 +207,20 @@ footer {
     font-weight: 600;
     margin-bottom: 10px;
 }
+
+/*map*/
+.map {
+    display: flex;
+    margin: 2%;
+}
+
+.mapleft {
+    text-align: right;
+    width: 50%;
+}
+
+.mapright {
+    text-align: left;
+    width: 50%;
+    margin: 3% 1%;
+}
