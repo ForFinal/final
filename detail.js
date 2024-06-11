@@ -84,7 +84,9 @@ function updateStars() {
     }
 }
 
-function clean() {
-    rating = -1;
-    updateStars();
-}
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        this.reset();
+    });
+});
