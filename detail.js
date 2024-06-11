@@ -1,20 +1,22 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const productName = urlParams.get('name');
-const productDescription = urlParams.get('description');
-const productPrice = urlParams.get('price');
-const productImage = urlParams.get('img');
-const productFrom = urlParams.get('from');
-const productId = urlParams.get('pid');
-const productPro = urlParams.get('pro');
-
-document.getElementById('productName').innerText = productName;
-document.getElementById('productDescription').innerText = productDescription;
-document.getElementById('productPrice').innerText = '售價：NT$' + productPrice;
-document.getElementById('productImage').src = './images/' + productImage;
-document.getElementById('productFrom').innerText = '產地：' + productFrom;
-document.getElementById('productId').innerText = '商品編號：' + productId;
-document.getElementById('productPro').innerText = '保存方式：' + productPro;
+window.onload = function () {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const productName = urlParams.get('name');
+    const productDescription = urlParams.get('description');
+    const productPrice = urlParams.get('price');
+    const productImage = urlParams.get('img');
+    const productFrom = urlParams.get('from');
+    const productId = urlParams.get('pid');
+    const productPro = urlParams.get('pro');
+    
+    document.getElementById('productName').innerText = productName;
+    document.getElementById('productDescription').innerText = productDescription;
+    document.getElementById('productPrice').innerText = '售價：NT$' + productPrice;
+    document.getElementById('productImage').src = './images/' + productImage;
+    document.getElementById('productFrom').innerText = '產地：' + productFrom;
+    document.getElementById('productId').innerText = '商品編號：' + productId;
+    document.getElementById('productPro').innerText = '保存方式：' + productPro;
+};
 
 window.onload = async function () {
     addListener();
