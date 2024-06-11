@@ -253,3 +253,19 @@ footer {
         margin: 0.5rem;
     }
 }
+
+.map {
+    display: flex;
+    margin: 2%;
+}
+
+.mapleft {
+    text-align: right;
+    width: 50%;
+}
+
+.mapright {
+    text-align: left;
+    width: 50%;
+    margin: 3% 1%;
+}
