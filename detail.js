@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         stars[i].addEventListener("click", Click);
     }
     document.getElementById("clean").addEventListener("click", clean);
-});
+}
 
 function mouseover() {
     let index = parseInt(this.dataset.index);
