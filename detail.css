@@ -6,7 +6,11 @@
 }
 
 body {
-    background-color: #e9edc9;
+    /*background-color: #e9edc9;*/
+    background-color: #8fbc8f;
+    position: fixed;
+    width: 100%;
+    height: 55px;
 }
 
 .detailmain {
