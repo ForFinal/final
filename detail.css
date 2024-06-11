@@ -172,6 +172,30 @@ footer {
 }
 
 /*aboutus*/
+.left {
+    display: flex;
+    float: left;
+    margin: 7px 0px 8px 20px;
+}
+
+.left img {
+    width: 37px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.name a {
+    text-decoration: none;
+    color: #006080;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.right {
+    float: right;
+    margin-right: 10px;
+}
+
 .alltext {
     width: 60%;
     align-items: center;
