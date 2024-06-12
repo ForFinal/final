@@ -257,6 +257,27 @@ footer {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+
+    .alltext {
+        width: 80%;
+        margin-top: 90px;
+    }
+
+    #us {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .us,
+    .ustext {
+        text-align: center;
+    }
+
+    .aboutus {
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+    }
 }
 
 @media screen and (max-width:599px) {
@@ -299,5 +320,26 @@ footer {
         width: 90%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .alltext {
+        width: 80%;
+        margin-top: 90px;
+    }
+
+    #us {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .us,
+    .ustext {
+        text-align: center;
+    }
+
+    .aboutus {
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
     }
 }
