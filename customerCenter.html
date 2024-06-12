@@ -5,16 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>會員中心</title>
     <link rel="stylesheet" href="stylee.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h3>果果の小舖</h3>
-
-    <nav class="mainFunction">
-        <a href="">產品</a>
-        <a href="AboutUs.html">關於我們</a>
-        <a href="Members.html">會員中心</a>
-        <a href="cart.html">購物車</a>
-    </nav>
+    <header>
+        <div class="left">
+            <div><img src="images/logo.jpg"></div>
+            <div class="name"><a href="index.html">果果の小舖</a></div>
+        </div>
+        <nav class="right">
+            <a href="AboutUs.html">關於我們</a>
+            <div class="dropdown">
+                <a href="index.html#allcontent" class="dropbtn">商品</a>
+                <div class="dropdown-content">
+                    <a href="index.html#one">國產水果</a>
+                    <a href="index.html#two">進口水果</a>
+                    <a href="index.html#three">其他商品</a>
+                </div>
+            </div>
+            <a href="Members.html">會員中心</a>
+            <a href="Cart.html">購物車</a>
+        </nav>
+    </header>
     
     <h2>會員基本資料</h2><hr>
 
@@ -24,8 +36,8 @@
 
     <main class="main">
         <article>
-            <section>
-                <img src="images/ppl.png" alt="profile">
+            <section class="customer" id="cus">
+                <img src="images/ppl.png" alt="profile"><br>
                 <p>姓名：王小美</p>
                 <p>性別：女</p>
                 <p>生日：1995/03/22</p>
@@ -33,10 +45,8 @@
                 <p>電話：0912345678</p>
                 <p>信箱：wangxiaome0322@gmail.com</p>
                 <p>帳號：wangxiaomei</p>
-                <p>密碼：iemooaixgnaw</p>
-            </section>
-            
-            <section>
+                <p>密碼：iemooaixgnaw</p><br>
+
                 <p>購買紀錄：<a href="record.html">2024/05/26</a></p>
                 <p>購物評論：本次購買的水果非常新鮮，禮盒包裝完整，運送速度很快，下次還會回購！！</p>
                 <p>購買紀錄：<a href="record.html">2023/12/07</a></p>
@@ -48,5 +58,9 @@
     <img src="images/deco1.png" class="deco">
     <img src="images/deco1.png" class="deco">
     <img src="images/deco1.png" class="deco">
+
+    <footer>
+        <p>果果小舖 © 2024</p>
+    </footer>
 </body>
 </html>
