@@ -60,14 +60,25 @@ section {
     justify-content: center;
 }
 
+#allcontent {
+    width: 75%;
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    padding: 10px 0px;
+    margin: auto;
+    background-color: #e8e8d0;
+}
+
 #container {
     width: 100%;
-    height: 100vh;
+    height: 730px;
 }
 
 #slide {
-    width: 80%;
-    width: 80%;
+    margin-top: 45px;
+    width: 75%;
+    height: 100%;
     border: none;
 }
 
@@ -137,7 +148,7 @@ hr {
 .card-text {
     color: black;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     padding: 1rem 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -209,63 +220,84 @@ footer {
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 639px) {
-    .right {
-        display: none;
+@media (min-width:600px) and (max-width:979px) {
+    * {
+        margin: 0;
+        font-size: 14px;
     }
 
-    .left {
-        width: 100%;
-        background-color: grey;
-    }
-}
-
-@media (max-width: 768px) {
-    .product-details {
-        flex-direction: column;
+    header {
+        height: 70px;
+        margin: 0;
     }
 
-    .product-details>.left {
-        width: 100%;
-        height: auto;
+    #container {
+        height: 500px;
     }
 
-    .product-details>.right {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 1rem;
+    #slide {
+        height: 100%;
+        width: 75%;
+        margin-top: 80px;
     }
 
-    .btn_cart,
-    .btn-container {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .feedback {
-        margin: 2% 1%;
-        padding: 1%;
+    nav a {
+        font-size: 18px;
+        padding: 5px;
     }
 
-    .getFeedback {
-        padding: 0.5rem;
-        margin: 0.5rem;
+    .detail {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #otherProducts {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 }
-/*map*/
-.map {
-    display: flex;
-    margin: 2%;
-}
 
-.mapleft {
-    text-align: right;
-    width: 50%;
-}
+@media screen and (max-width:599px) {
+    * {
+        margin: 0;
+        font-size: 12px;
+    }
 
-.mapright {
-    text-align: left;
-    width: 50%;
-    margin: 3% 1%;
+    header {
+        height: 90px;
+        margin: 0;
+    }
+
+    #container {
+        height: 320px;
+    }
+
+    #slide {
+        height: 100%;
+        width: 75%;
+        margin-top: 100px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    #allcontent {
+        margin-top: 40px;
+    }
+
+    .detail {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #otherProducts {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
 }
