@@ -2,7 +2,7 @@
     margin: 0%;
     padding: 0%;
     list-style: none;
-    font-family: sans-serif, "微軟正黑體";
+    font-family: sans-serif, "標楷體";
 }
 
 body {
@@ -171,7 +171,6 @@ footer {
     padding: 10px;
 }
 
-/*aboutus*/
 .left {
     display: flex;
     float: left;
@@ -196,55 +195,29 @@ footer {
     margin-right: 10px;
 }
 
-.alltext {
-    width: 60%;
-    align-items: center;
-    margin-top: 55px;
+/*header*/
+header {
+    background-color: #8fbc8f;
+    position: fixed;
+    width: 100%;
+    height: 55px;
 }
 
-.about {
-    background-color: #e8e8d0;
-    border: 2px dashed black;
-    border-radius: 15px;
-    margin: 10px;
-    padding: 10px;
+nav {
+    padding: 13px;
 }
 
-.abouttitle {
-    font-size: 20px;
+nav a {
+    text-decoration: none;
+    font-size: 21px;
     font-weight: 600;
+    color: black;
+    padding: 18px 15px;
 }
 
-.abouttext {
-    background-color: #e8e8d0;
-    font-size: 17px;
-    margin-top: 2px;
-}
-
-.aboutus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 28%;
-}
-
-.pic img {
-    width: 180px;
-    border-radius: 50%;
-    margin: 10px;
-    border: 1px solid black;
-}
-
-.us {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 10px 0px 9px 0px;
-}
-
-.ustext {
-    font-size: 17px;
-    font-weight: 600;
-    margin-bottom: 10px;
+nav a:hover {
+    background-color: #008080;
+    color: #bc8f8f;
 }
 
 @media (max-width: 768px) {
