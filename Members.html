@@ -8,22 +8,37 @@
     <link rel="stylesheet" href="stylee.css">
 </head>
 <body>
-    <h3>果果の小舖</h3>
-    
-    <nav class="mainFunction">
-        <a href="">產品</a>
-        <a href="AboutUs.html">關於我們</a>
-        <a href="Members.html">會員中心</a>
-        <a href="Cart.html">購物車</a>
-    </nav>
+    <header>
+        <div class="left">
+            <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+            <div class="name"><a href="index.html">果果の小舖</a></div>
+        </div>
+        <nav class="right">
+            <a href="AboutUs.html">關於我們</a>
+            <div class="dropdown">
+                <a href="index.html#allcontent" class="dropbtn">商品</a>
+                <div class="dropdown-content">
+                    <a href="index.html#one">國產水果</a>
+                    <a href="index.html#two">進口水果</a>
+                    <a href="index.html#three">其他商品</a>
+                </div>
+            </div>
+            <a href="Members.html">會員中心</a>
+            <a href="Cart.html">購物車</a>
+        </nav>
+    </header>
 
     <div class="login">
-        <h2>會員登入</h2>
-        帳號：<input type="text"><br>
-        密碼：<input type="password"><br>
-        <a href="register.html"><input type="button" value="註冊"></a>
+        <h2>會員登入</h2><br>
+        帳號：<input type="text" class="text"><br>
+        密碼：<input type="password" class="text"><br>
+        <a href="register.html"><input type="button" value="註冊" class="text"></a>
         <a href="customerCenter.html"><input type="button" value="登入"> </a>
     </div>
+
+    <footer>
+        <p>果果小舖 © 2024</p>
+    </footer>
     
 </body>
 </html>
