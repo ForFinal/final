@@ -87,11 +87,7 @@ function updateStars() {
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("feedbackForm").addEventListener("submit", function (event) {
         event.preventDefault();
-        
-        // Reset the form values
         this.reset();
-        
-        // Reset the stars rating
         rating = -1;
         updateStars();
     });
