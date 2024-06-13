@@ -122,7 +122,8 @@ main {
     background-repeat: no-repeat;
     text-align: center;
     background-size: 1290px auto;
-    padding: 300px;
+    padding: 330px;
+    height: 100vh;
 }
 
 .register {
