@@ -5,7 +5,7 @@
     font-family: sans-serif, "標楷體";
 }
 
-body{
+body {
     background-color: #FDFFFF;
     position: relative;
 }
@@ -30,7 +30,7 @@ body{
 
 #cus {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-size: 25px;
     font-weight: 500;
     margin-left: 100px;
@@ -110,7 +110,7 @@ main {
     padding-right: 100px;
     padding-top: 45px;
 }
-   
+
 .NT {
     padding-left: 550px;
     color: darkslategrey;
@@ -146,18 +146,19 @@ main {
 }
 
 .recordImg {
-    width: 600px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.reImg {
+    width: 800px;
     height: auto;
-    margin-left: 400px;
-    margin-top: 120px;
-    margin-bottom: 40px;
 }
 
 .tableColor {
-    margin-left: 150px;
     color: #7B7B7B;
     text-align: center;
-    margin-bottom: 100px;
+    margin: auto;
 }
 
 .main {
@@ -171,14 +172,26 @@ main {
 
 .deco {
     background-image: url(../images/deco1.png);
-    width: 450px;
-    min-height: 100px;
-    padding-left: 50px;
-    padding-top: 30px;
-    justify-content: center;
+    width: 100%;
+    min-height: 50px;
     align-content: center;
+    background-size: 200px 40px;
     background-repeat: repeat-x;
+    padding: 0;
+    margin-top: 40px;
 }
+
+.deco1 {
+    background-image: url(../images/deco1.png);
+    width: 100%;
+    min-height: 40px;
+    align-content: center;
+    background-size: 200px 40px;
+    background-repeat: repeat-x;
+    margin-top: 50px;
+}
+
+
 
 /*footer*/
 footer {
@@ -285,6 +298,3 @@ nav a:hover {
 .clearfix {
     clear: both;
 }
-
-
-
