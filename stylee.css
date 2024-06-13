@@ -117,11 +117,9 @@ main {
 
 .login {
     background-image: url(images/bg3.jpg);
-    text-align: center;
     background-size: cover;
-    background-size: 1290px auto;
-    padding: 300px;
-    background-position: center center;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
