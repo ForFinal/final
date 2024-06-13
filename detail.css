@@ -19,12 +19,17 @@ body {
     display: flex;
     width: 80%;
     margin: 0 auto;
+    padding-top: 5%;
 }
 
 .product-details>.left {
     width: 35%;
     height: 35%;
     padding-top: 2%;
+}
+
+#productImage.left {
+    margin: 0;
 }
 
 .product-details>.right {
