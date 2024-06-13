@@ -170,12 +170,14 @@ main {
 }
 
 .deco {
+    background-image: url(../images/deco1.png);
     width: 450px;
-    height: auto;
+    min-height: 100px;
     padding-left: 50px;
     padding-top: 30px;
     justify-content: center;
     align-content: center;
+    background-repeat: repeat-x;
 }
 
 /*footer*/
