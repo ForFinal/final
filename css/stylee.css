@@ -219,7 +219,7 @@ footer {
     font-size: 20px;
     padding: 10px;
     bottom: 0;
-    position: relative;
+    position: fixed;
 }
 
 /*header*/
