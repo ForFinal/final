@@ -133,7 +133,7 @@ main {
     background-repeat: no-repeat;
     width: 100%;
     background-attachment: fixed;
-    height: 775px;
+    height: 100vh;
     padding-top: 90px;
 }
 
